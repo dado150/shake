@@ -12,18 +12,32 @@ import Foundation
 
 class ViewController: UIViewController {
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
     }
-
+    
+    
+    @IBOutlet weak var video_Player: UIWebView!
+    
+    func playVideo(videoID:String){
+        var youTubeEmbed = "https://www.youtube.com/embed/"
+        var youTubeEmbedLast = "?autoplay=1"
+        var requestURL = NSURL (string: youTubeEmbed + videoID + youTubeEmbedLast)
+        var request = NSURLRequest(URL: requestURL!)
+        video_Player.loadRequest(request)
+    }
+    
+    
+    @IBOutlet weak var titleVideo: UILabel!
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
    
-    override func motionEnded(motion: UIEventSubtype,
-        withEvent event: UIEvent?) {
+    override func motionEnded(motion: UIEventSubtype,withEvent event: UIEvent?) {
             
             if motion == .MotionShake{
                 
@@ -59,8 +73,24 @@ class ViewController: UIViewController {
                             var getInfoVideo = arrayVideo["snippet"] as! NSDictionary
                             var getResources = getInfoVideo["resourceId"] as! NSDictionary
                             var getVideoID = getResources["videoId"] as! String
-                            print(getVideoID)
+                            var title = getInfoVideo["title"] as! String
+                            self.playVideo(getVideoID)
                             
+                            print(title)
+                            var videoFullTitle = title
+      
+                                if videoFullTitle.rangeOfString("Trailer") != nil {
+                                
+                                    var delimiter = " Official"
+                                    var newstr = videoFullTitle
+                                    var shortTitle = newstr.componentsSeparatedByString(delimiter)
+                                    var FinalTitle = shortTitle[0]
+                                    self.titleVideo.text = FinalTitle
+                        
+                                } else{
+                                    self.titleVideo.text = title
+                                }
+
                         }
                         
                     }
