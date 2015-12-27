@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B51F7FA1C2B77AD0076DE97 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B51F7F91C2B77AD0076DE97 /* AVFoundation.framework */; };
+		0B51F7FC1C2B77B30076DE97 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B51F7FB1C2B77B30076DE97 /* AVKit.framework */; };
 		0BE7C3AC1C2AFE8B00CF2FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE7C3AB1C2AFE8B00CF2FC0 /* AppDelegate.swift */; };
 		0BE7C3AE1C2AFE8B00CF2FC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE7C3AD1C2AFE8B00CF2FC0 /* ViewController.swift */; };
 		0BE7C3B11C2AFE8B00CF2FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE7C3AF1C2AFE8B00CF2FC0 /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		0BE7C3B91C2AFE8B00CF2FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE7C3B71C2AFE8B00CF2FC0 /* LaunchScreen.storyboard */; };
 		0BE7C3C41C2AFE8B00CF2FC0 /* shakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE7C3C31C2AFE8B00CF2FC0 /* shakeTests.swift */; };
 		0BE7C3CF1C2AFE8B00CF2FC0 /* shakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE7C3CE1C2AFE8B00CF2FC0 /* shakeUITests.swift */; };
+		0BFA8CBA1C2DCAAE00891FF4 /* YouTubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFA8CB91C2DCAAE00891FF4 /* YouTubePlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +37,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0BDAE0071C2DC070005006F2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "/Users/dado150/Desktop/Swift-YouTube-Player-master/YouTubePlayerExample/Carthage/Build/iOS/YouTubePlayer.framework";
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0B51F7F91C2B77AD0076DE97 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0B51F7FB1C2B77B30076DE97 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		0BE7C3A81C2AFE8A00CF2FC0 /* shake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE7C3AB1C2AFE8B00CF2FC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BE7C3AD1C2AFE8B00CF2FC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +66,7 @@
 		0BE7C3CA1C2AFE8B00CF2FC0 /* shakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shakeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE7C3CE1C2AFE8B00CF2FC0 /* shakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shakeUITests.swift; sourceTree = "<group>"; };
 		0BE7C3D01C2AFE8B00CF2FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BFA8CB91C2DCAAE00891FF4 /* YouTubePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouTubePlayer.framework; path = Carthage/Build/iOS/YouTubePlayer.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BFA8CBA1C2DCAAE00891FF4 /* YouTubePlayer.framework in Frameworks */,
+				0B51F7FC1C2B77B30076DE97 /* AVKit.framework in Frameworks */,
+				0B51F7FA1C2B77AD0076DE97 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +100,9 @@
 		0BE7C39F1C2AFE8A00CF2FC0 = {
 			isa = PBXGroup;
 			children = (
+				0BFA8CB91C2DCAAE00891FF4 /* YouTubePlayer.framework */,
+				0B51F7FB1C2B77B30076DE97 /* AVKit.framework */,
+				0B51F7F91C2B77AD0076DE97 /* AVFoundation.framework */,
 				0BE7C3AA1C2AFE8A00CF2FC0 /* shake */,
 				0BE7C3C21C2AFE8B00CF2FC0 /* shakeTests */,
 				0BE7C3CD1C2AFE8B00CF2FC0 /* shakeUITests */,
@@ -138,6 +162,8 @@
 				0BE7C3A41C2AFE8A00CF2FC0 /* Sources */,
 				0BE7C3A51C2AFE8A00CF2FC0 /* Frameworks */,
 				0BE7C3A61C2AFE8A00CF2FC0 /* Resources */,
+				0BDAE0071C2DC070005006F2 /* CopyFiles */,
+				0BFA8CBB1C2DCABA00891FF4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,6 +279,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BFA8CBB1C2DCABA00891FF4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/YouTubePlayer.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0BE7C3A41C2AFE8A00CF2FC0 /* Sources */ = {
@@ -401,7 +444,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = shake/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.150up.shake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,7 +461,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = shake/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.150up.shake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +478,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = shakeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.150up.shakeTests;
@@ -435,6 +494,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = shakeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.150up.shakeTests;
@@ -486,6 +549,7 @@
 				0BE7C3D51C2AFE8B00CF2FC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0BE7C3D61C2AFE8B00CF2FC0 /* Build configuration list for PBXNativeTarget "shakeTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +558,7 @@
 				0BE7C3D81C2AFE8B00CF2FC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0BE7C3D91C2AFE8B00CF2FC0 /* Build configuration list for PBXNativeTarget "shakeUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +567,7 @@
 				0BE7C3DB1C2AFE8B00CF2FC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

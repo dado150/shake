@@ -7,27 +7,44 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 import Foundation
-
+import CoreData
+import YouTubePlayer
 
 class ViewController: UIViewController {
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
        
+//        
+//        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        var context:MSManagedObjectContext = appDel.managedObjectContext!
+//        
+//        var newMovie = NSEntityDescription.insertNewObjectForEntityForName("My Movies", inManagedObjectContext: context) as MSManagedObject
+//        
+//        newMovie.setValue("Star Wars", forKey: "title")
+    
+        
+        
+//        let videoURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+//        let player = AVPlayer(URL: videoURL!)
+//        let playerLayer = AVPlayerLayer(player: player)
+//        playerLayer.frame = CGRectMake(10, 100 , 100, 100)
+//        self.view.layer.addSublayer(playerLayer)
+//        player.play()
+        
+//        let address = NSURL(string: "https://www.youtube.com/watch?v=SEyDminvr7Q")
+        
     }
     
-    
+    @IBOutlet weak var YouTubePlayer: YouTubePlayerView!
+       
     @IBOutlet weak var video_Player: UIWebView!
     
-    func playVideo(videoID:String){
-        var youTubeEmbed = "https://www.youtube.com/embed/"
-        var youTubeEmbedLast = "?autoplay=1"
-        var requestURL = NSURL (string: youTubeEmbed + videoID + youTubeEmbedLast)
-        var request = NSURLRequest(URL: requestURL!)
-        video_Player.loadRequest(request)
-    }
     
     
     @IBOutlet weak var titleVideo: UILabel!
@@ -74,8 +91,15 @@ class ViewController: UIViewController {
                             var getResources = getInfoVideo["resourceId"] as! NSDictionary
                             var getVideoID = getResources["videoId"] as! String
                             var title = getInfoVideo["title"] as! String
-                            self.playVideo(getVideoID)
                             
+                            self.YouTubePlayer.playerVars = [
+                                "playsinline": "1",
+                                "controls": "1",
+                                "showinfo": "0"
+                            ]
+                            
+                            self.YouTubePlayer.loadVideoID(getVideoID)
+
                             print(title)
                             var videoFullTitle = title
       
@@ -86,12 +110,12 @@ class ViewController: UIViewController {
                                     var shortTitle = newstr.componentsSeparatedByString(delimiter)
                                     var FinalTitle = shortTitle[0]
                                     self.titleVideo.text = FinalTitle
+                                    print(FinalTitle)
                         
                                 } else{
                                     self.titleVideo.text = title
                                 }
-
-                        }
+                       }
                         
                     }
                     
@@ -101,6 +125,7 @@ class ViewController: UIViewController {
             }
             
     }
+    
     
     
 
