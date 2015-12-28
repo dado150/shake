@@ -115,10 +115,5 @@ class ViewController: UIViewController {
         }
         return FinalTitle
     }
-    
-    func readingJson (){
-    
-    }
-
 }
 
