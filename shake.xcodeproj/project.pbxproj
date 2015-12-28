@@ -222,6 +222,7 @@
 				TargetAttributes = {
 					0BE7C3A71C2AFE8A00CF2FC0 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = UMQ595HRZX;
 					};
 					0BE7C3BE1C2AFE8B00CF2FC0 = {
 						CreatedOnToolsVersion = 7.2;
